@@ -1,0 +1,129 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Header */
+.header {
+    padding: 1rem 1.25rem; /* Shorthand for top/bottom and left/right padding */
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    color: #8540f5;
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-right: 3rem; /* Equivalent to mr-12 */
+    text-decoration: none; /* Remove default link underline */
+}
+
+/* Navigation Items Container */
+.nav-items {
+    display: flex;
+    gap: 2rem; /* Equivalent to gap-8 */
+}
+
+/* Navigation Link - Base styles */
+.nav-link {
+    font-size: 1rem; /* Equivalent to text-base */
+    text-decoration: none;
+    color: #6c757d; /* Default color */
+    transition: color 0.15s ease-in-out; /* Shorthand for transition properties */
+}
+
+/* Navigation Link - Active state */
+.nav-link.active {
+    color: #8540f5;
+}
+
+/* Navigation Link - Hover state */
+.nav-link:hover {
+    color: #5227cc;
+}
+
+:root {
+    /* Color variables */
+    --primary: #520dc2;
+    --primary-foreground: #ffffff;
+    --secondary: #520dc2;
+    --radius: 0.5rem;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Container */
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1400px;
+}
+
+/* Header */
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+/* Graphic Element */
+.graphic-container {
+    position: relative;
+    width: 10.25rem;
+    height: 10.25rem;
+    flex-shrink: 0;
+}
+
+.graphic-background {
+    transform: rotate(-7deg);
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary);
+    border-radius: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphic-element {
+    width: 6.25rem;
+    height: 6.25rem;
+    fill: var(--primary-foreground);
+}
+
+/* Text Content */
+.banner-text {
+    flex: 1;
+}
+
+.title {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: var(--secondary);
+    font-size: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .title {
+        font-size: 3.75rem;
+    }
+    .description {
+        font-size: 1.5rem;
+    }
+}
