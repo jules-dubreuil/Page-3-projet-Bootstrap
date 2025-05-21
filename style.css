@@ -149,7 +149,7 @@ body {
 
 .testimonial-section {
     background-color: var(--purple-dark);
-    padding: 9rem;
+    padding: 2rem;
     border-radius: 1.875rem;
 }
 
@@ -160,9 +160,7 @@ body {
 }
 
 .testimonial-content {
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2rem;
 }
 
 .project-card {
@@ -185,8 +183,8 @@ body {
 }
 
 .microsoft-image {
-    height: 2.5rem;
-    width: auto;
+    height: 35%;
+    width: 35%;
 }
 
 
@@ -321,19 +319,27 @@ body {
 
 .card-footer {
   background-color: var(--gray-lighter);
+  border-radius: 10rem;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--gray-light);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
-.company-name {
-  font-weight: bold;
-  color: var(--dark-blue);
+.sony-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 20%;
+  height: 20%;
+}
+
+.company-name{
+    width: 15%;
+    height: 15%;
 }
 
 .company-graphic {
@@ -348,7 +354,7 @@ body {
   color: #ffffff;
   font-size: 0.75rem;
   padding: 0.125rem 0.75rem;
-  border-radius: 1rem;
+  border-radius: 4px;
 }
 
 :root {
@@ -413,4 +419,95 @@ body {
     background-color: var(--purple-500);
     color: var(--white);
     border: none;
+}
+
+:root {
+    /* Custom colors from Tailwind config and component usage */
+    --grand-purple-dark: #520dc2; /* Main background */
+    --grand-purple-default: #7749f8; /* Primary button, square background */
+    --grand-purple-hover: #3d0a91; /* Button hover */
+    --grand-text-light: #ffffff; /* Text on dark background */
+    --grand-text-dark: #7749f8; /* Text for office details */
+
+    /* Border radius variables */
+    --radius-lg: 1.5rem; /* rounded-3xl (24px) */
+    --radius-xl: 0.75rem; /* rounded-xl (12px) */
+    --radius-md: 0.5rem;  /* rounded-lg (8px) */
+}
+
+.content-wrapper {
+    background-color: var(--grand-text-light); /* bg-white */
+    border-radius: var(--radius-lg); /* rounded-3xl */
+    width: 100%;
+    max-width: 80rem; /* max-w-5xl (80rem = 1280px) */
+    padding: 2rem; /* p-8 */
+}
+
+.initial-display {
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+.initial-square {
+    background-color: var(--grand-purple-default);
+    width: 3.5rem; /* w-14 */
+    height: 3.5rem; /* h-14 */
+    border-radius: var(--radius-md); /* rounded-lg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-7deg);
+}
+
+.grandiose-logo {
+    width: 50%;
+}
+
+.action-section {
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+.action-button {
+    background-color: var(--grand-purple-default);
+    color: var(--grand-text-light); /* text-white */
+    padding: 1rem 2rem; /* px-8 py-6 */
+    height: auto;
+    font-size: 1.125rem; /* text-lg */
+    border-radius: var(--radius-xl); /* rounded-xl */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block; /* Ensure padding and dimensions work correctly */
+    text-decoration: none; /* For if it's an <a> tag */
+}
+
+.action-button:hover {
+    background-color: var(--grand-purple-hover); /* hover:bg-[#3d0a91] */
+}
+
+.office-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* gap-8 */
+}
+
+.office-location {
+    flex: 1 1 100%; /* grid-cols-1 */
+}
+
+@media (min-width: 768px) { /* md: breakpoint */
+    .office-location {
+        flex: 1 1 calc(50% - 1rem); /* md:grid-cols-2, accounting for gap */
+        max-width: calc(50% - 1rem);
+    }
+}
+
+.office-title {
+    color: var(--grand-text-dark); /* text-[#7749f8] */
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.office-address {
+    color: var(--grand-text-dark); /* text-[#7749f8] */
 }
